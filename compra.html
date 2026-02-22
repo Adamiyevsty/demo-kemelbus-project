@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compra de Pasaje - Kemelbus</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="src/assets/css/flaticon.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="src/assets/css/insur.css" />
+    <link rel="stylesheet" href="src/assets/css/kemelbus.css" />
+  </head>
+  <body>
+    
+    <!-- Header Simplificado -->
+    <header class="main-header clearfix">
+        <div class="main-header__top">
+            <div class="container">
+                <div class="main-header__top-inner">
+                    <div class="main-header__top-address">
+                        <ul class="list-unstyled main-header__top-address-list">
+                            <li>
+                                <i class="icon">
+                                    <span class="icon-pin"></span>
+                                </i>
+                                <div class="text">
+                                    <p>X Región, Chile</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-header__top-right">
+                        <div class="main-header__top-menu-box">
+                            <ul class="list-unstyled main-header__top-menu">
+                                <li>Nuestras redes</li>
+                            </ul>
+                        </div>
+                        <div class="main-header__top-social-box">
+                            <div class="main-header__top-social">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-menu clearfix">
+            <div class="main-menu__wrapper clearfix">
+                <div class="container">
+                    <div class="main-menu__wrapper-inner clearfix">
+                        <div class="main-menu__left">
+                            <div class="main-menu__logo">
+                                <a href="index.html">
+                                    <img src="src/assets/images/kemelbus_logo.jpg" alt="Kemelbus Logo" class="logo-img">
+                                </a>
+                            </div>
+                            <div class="main-menu__main-menu-box">
+                                <div class="main-menu__main-menu-box-inner">
+                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                    <ul class="main-menu__list">
+                                        <li>
+                                            <a href="index.html">Inicio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Empresas</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Servicios Especiales Turismo</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Carretera Austral Horarios</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main-menu__main-menu-box-search-get-quote-btn">
+                                    <div class="main-menu__main-menu-box-search">
+                                        <a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-menu__right">
+                            <div class="main-menu__call">
+                                <div class="main-menu__call-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="main-menu__call-content">
+                                    <a href="tel:+56412345678">+56 41 234 5678</a>
+                                    <p>Contáctanos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Compra de Pasajes -->
+        <section class="purchase-section">
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-title animate-fade-in-up">
+                    <h2>Compra tu pasaje</h2>
+                </div>
+
+                <!-- Selector de viaje -->
+                <div class="purchase-card animate-fade-in-up delay-1">
+                    <div class="purchase-card__header">
+                        <h3>Busca tu viaje</h3>
+                        <p class="purchase-card__subtitle">Selecciona origen, destino y fecha</p>
+                    </div>
+
+                    <form class="purchase-form" id="search-form">
+                        <!-- Selector de Origen y Destino -->
+                        <div class="route-selector">
+                            <div class="route-selector__box">
+                                <label class="form-label"><i class="fas fa-map-marker-alt"></i> Origen</label>
+                                <select id="origen-select" class="form-input">
+                                    <option value="">Seleccionar origen</option>
+                                    <option value="puertomontt">Puerto Montt</option>
+                                    <option value="hornopiren">Hornopirén</option>
+                                    <option value="chaiten">Chaitén</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="route-swap-btn" id="swap-routes" title="Intercambiar">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            
+                            <div class="route-selector__box">
+                                <label class="form-label"><i class="fas fa-map-marker-alt"></i> Destino</label>
+                                <select id="destino-select" class="form-input">
+                                    <option value="">Seleccionar destino</option>
+                                    <option value="puertomontt">Puerto Montt</option>
+                                    <option value="hornopiren">Hornopirén</option>
+                                    <option value="chaiten">Chaitén</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Selector de fecha -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="fecha-salida"><i class="fas fa-calendar-alt"></i> Fecha de Salida</label>
+                                <input type="date" id="fecha-salida" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <!-- Botón de búsqueda -->
+                        <button type="button" class="btn-comprar btn-large btn-primary-gradient search-btn" id="btn-buscar">
+                            <i class="fas fa-search"></i> Buscar Horarios
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Resultados de búsqueda (se muestra después de buscar) -->
+                <div class="search-results" id="search-results" style="display: none;">
+                    <!-- Información de la ruta -->
+                    <div class="purchase-card animate-fade-in-up">
+                        <div class="purchase-card__header">
+                            <h3 id="result-ruta-titulo">Puerto Montt - Hornopirén</h3>
+                            <p class="purchase-card__subtitle" id="result-fecha">Lunes 15 de Enero de 2025</p>
+                        </div>
+
+                        <!-- Imagen de la ruta -->
+                        <div class="purchase-card__image">
+                            <img id="result-ruta-imagen" src="src/assets/images/ptomontt_hornopiren_ruta.jpg" alt="Ruta">
+                            <div class="purchase-card__badge">
+                                <span class="badge-icon"><i class="fas fa-bus"></i></span>
+                                <span id="result-ruta-badge">Parque Nacional</span>
+                            </div>
+                        </div>
+
+                        <!-- Horarios disponibles según el día -->
+                        <div class="purchase-form">
+                            <div class="form-group">
+                                <label class="form-label"><i class="fas fa-clock"></i> Horarios Disponibles</label>
+                                <div class="schedule-options" id="horarios-disponibles">
+                                    <!-- Se llena dinámicamente -->
+                                </div>
+                            </div>
+
+                            <!-- Disclaimer destino intermedio -->
+                            <div class="destination-disclaimer">
+                                <div class="disclaimer-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="disclaimer-content">
+                                    <p class="disclaimer-title">¿Tu destino es un pueblo intermedio?</p>
+                                    <p class="disclaimer-text">Si tu destino es durante la ruta (no el terminal final), por favor indícanos en el siguiente campo para que sepamos dónde te dejarás. El pasaje se cobra completo, pero podrás bajarte en el pueblo que indiques.</p>
+                                    <div class="disclaimer-input">
+                                        <input type="text" id="destino-intermedio" class="form-input" placeholder="Ej: Caleta La Arena, Caleta Puelche, etc.">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cantidad de asientos -->
+                            <div class="form-group">
+                                <label class="form-label" for="cantidad-asientos"><i class="fas fa-chair"></i> Cantidad de Asientos</label>
+                                <div class="quantity-selector">
+                                    <button type="button" class="qty-btn" id="qty-minus"><i class="fas fa-minus"></i></button>
+                                    <input type="number" id="cantidad-asientos" class="qty-input" value="1" min="1" max="10" readonly>
+                                    <button type="button" class="qty-btn" id="qty-plus"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Resumen del pedido -->
+                            <div class="purchase-summary">
+                                <h4><i class="fas fa-receipt"></i> Resumen del Pedido</h4>
+                                <div class="summary-row">
+                                    <span>Ruta:</span>
+                                    <span id="resumen-ruta">Puerto Montt → Hornopirén</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Fecha:</span>
+                                    <span id="resumen-fecha">-</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Horario:</span>
+                                    <span id="resumen-horario">-</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Asientos:</span>
+                                    <span id="resumen-asientos">1</span>
+                                </div>
+                                <div class="summary-divider"></div>
+                                <div class="summary-row summary-total">
+                                    <span>Precio por asiento:</span>
+                                    <span class="price">$6.900</span>
+                                </div>
+                                <div class="summary-row summary-total">
+                                    <span>Subtotal:</span>
+                                    <span class="price total" id="resumen-subtotal">$6.900</span>
+                                </div>
+                            </div>
+
+                            <!-- Botón de compra -->
+                            <div class="form-actions">
+                                <button type="button" class="btn-comprar btn-large btn-primary-gradient" id="btn-comprar">
+                                    <i class="fas fa-shopping-cart"></i> Comprar Pasaje
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer animate-fade-in">
+        <div class="container">
+            <p>Desarrollado por BGS - Projects 2026</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        // Datos de las rutas
+        const rutasData = {
+            'puertomontt-hornopiren': {
+                titulo: 'Puerto Montt - Hornopirén',
+                tituloInverso: 'Hornopirén - Puerto Montt',
+                origenNombre: 'Puerto Montt',
+                destinoNombre: 'Hornopirén',
+                imagen: 'src/assets/images/ptomontt_hornopiren_ruta.jpg',
+                badge: 'Parque Nacional',
+                horarios: {
+                    'lunes': [{ hora: '08:00' }, { hora: '10:00' }, { hora: '12:00' }, { hora: '14:30' }],
+                    'martes': [{ hora: '08:00' }, { hora: '10:00' }, { hora: '12:00' }, { hora: '14:30' }],
+                    'miercoles': [{ hora: '08:00' }, { hora: '10:00' }, { hora: '12:00' }, { hora: '14:30' }],
+                    'jueves': [{ hora: '08:00' }, { hora: '10:00' }, { hora: '12:00' }, { hora: '14:30' }],
+                    'viernes': [{ hora: '08:00' }, { hora: '10:00' }, { hora: '12:00' }, { hora: '14:30' }],
+                    'sabado': [{ hora: '08:00' }, { hora: '16:30' }],
+                    'domingo': [{ hora: '10:00' }, { hora: '16:30' }]
+                }
+            },
+            'hornopiren-puertomontt': {
+                titulo: 'Hornopirén - Puerto Montt',
+                tituloInverso: 'Puerto Montt - Hornopirén',
+                origenNombre: 'Hornopirén',
+                destinoNombre: 'Puerto Montt',
+                imagen: 'src/assets/images/ptomontt_hornopiren_ruta.jpg',
+                badge: 'Parque Nacional',
+                horarios: {
+                    'lunes': [{ hora: '05:30' }, { hora: '07:30' }, { hora: '13:00' }, { hora: '16:00' }],
+                    'martes': [{ hora: '05:30' }, { hora: '07:30' }, { hora: '13:00' }, { hora: '16:00' }],
+                    'miercoles': [{ hora: '05:30' }, { hora: '07:30' }, { hora: '13:00' }, { hora: '16:00' }],
+                    'jueves': [{ hora: '05:30' }, { hora: '07:30' }, { hora: '13:00' }, { hora: '16:00' }],
+                    'viernes': [{ hora: '05:30' }, { hora: '07:30' }, { hora: '13:00' }, { hora: '16:00' }],
+                    'sabado': [{ hora: '10:30' }, { hora: '13:00' }],
+                    'domingo': [{ hora: '13:00' }, { hora: '16:30' }]
+                }
+            },
+            'puertomontt-chaiten': {
+                titulo: 'Puerto Montt - Chaitén',
+                tituloInverso: 'Chaitén - Puerto Montt',
+                origenNombre: 'Puerto Montt',
+                destinoNombre: 'Chaitén',
+                imagen: 'src/assets/images/ptomontt_chaiten_ruta.jpg',
+                badge: 'Conexión Ferry',
+                horarios: {
+                    'lunes': [{ hora: '07:00' }],
+                    'martes': [{ hora: '07:00' }],
+                    'miercoles': [{ hora: '07:00' }],
+                    'jueves': [{ hora: '07:00' }],
+                    'viernes': [{ hora: '07:00' }],
+                    'sabado': [{ hora: '07:00' }],
+                    'domingo': [{ hora: '07:00' }]
+                }
+            },
+            'chaiten-puertomontt': {
+                titulo: 'Chaitén - Puerto Montt',
+                tituloInverso: 'Puerto Montt - Chaitén',
+                origenNombre: 'Chaitén',
+                destinoNombre: 'Puerto Montt',
+                imagen: 'src/assets/images/ptomontt_chaiten_ruta.jpg',
+                badge: 'Conexión Ferry',
+                horarios: {
+                    'lunes': [{ hora: '10:30' }],
+                    'martes': [{ hora: '10:30' }],
+                    'miercoles': [{ hora: '10:30' }],
+                    'jueves': [{ hora: '10:30' }],
+                    'viernes': [{ hora: '10:30' }],
+                    'sabado': [{ hora: '10:30' }],
+                    'domingo': [{ hora: '10:30' }]
+                }
+            }
+        };
+
+        const PRECIO_POR_ASIENTO = 6900;
+
+        // Estado de la compra
+        let estado = {
+            origen: '',
+            destino: '',
+            fecha: '',
+            horario: '',
+            cantidadAsientos: 1,
+            rutaKey: ''
+        };
+
+        // Días de la semana en español
+        const diasSemana = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Establecer fecha mínima (hoy)
+            const hoy = new Date().toISOString().split('T')[0];
+            document.getElementById('fecha-salida').min = hoy;
+            document.getElementById('fecha-salida').value = hoy;
+
+            // Configurar eventos
+            configurarEventos();
+        });
+
+        function configurarEventos() {
+            // Botón swap para intercambiar origen y destino
+            document.getElementById('swap-routes').addEventListener('click', function() {
+                const origen = document.getElementById('origen-select');
+                const destino = document.getElementById('destino-select');
+                const temp = origen.value;
+                origen.value = destino.value;
+                destino.value = temp;
+            });
+
+            // Botón de búsqueda
+            document.getElementById('btn-buscar').addEventListener('click', buscarHorarios);
+
+            // Selector de cantidad
+            document.getElementById('qty-minus').addEventListener('click', function() {
+                if (estado.cantidadAsientos > 1) {
+                    estado.cantidadAsientos--;
+                    actualizarCantidad();
+                }
+            });
+
+            document.getElementById('qty-plus').addEventListener('click', function() {
+                if (estado.cantidadAsientos < 10) {
+                    estado.cantidadAsientos++;
+                    actualizarCantidad();
+                }
+            });
+
+            // Botón comprar
+            document.getElementById('btn-comprar').addEventListener('click', function() {
+                if (validarFormulario()) {
+                    alert('¡Gracias por tu compra! (Funcionalidad en desarrollo)');
+                }
+            });
+        }
+
+        // Función para obtener el día de la semana correctamente
+        function getDiaSemana(fechaStr) {
+            const partes = fechaStr.split('-');
+            const año = parseInt(partes[0]);
+            const mes = parseInt(partes[1]) - 1;
+            const dia = parseInt(partes[2]);
+            const fechaObj = new Date(año, mes, dia);
+            return fechaObj.getDay();
+        }
+
+        function buscarHorarios() {
+            const origen = document.getElementById('origen-select').value;
+            const destino = document.getElementById('destino-select').value;
+            const fecha = document.getElementById('fecha-salida').value;
+
+            // Validar selección
+            if (!origen || !destino) {
+                alert('Por favor selecciona origen y destino.');
+                return;
+            }
+
+            if (origen === destino) {
+                alert('El origen y destino no pueden ser iguales.');
+                return;
+            }
+
+            if (!fecha) {
+                alert('Por favor selecciona una fecha de salida.');
+                return;
+            }
+
+            estado.origen = origen;
+            estado.destino = destino;
+            estado.fecha = fecha;
+
+            // Obtener la ruta
+            const rutaKey = `${origen}-${destino}`;
+            const rutaData = rutasData[rutaKey];
+
+            if (!rutaData) {
+                alert('No hay rutas disponibles para esta selección.');
+                return;
+            }
+
+            estado.rutaKey = rutaKey;
+
+            // Determinar el día de la semana correctamente
+            const diaIndex = getDiaSemana(fecha);
+            const diaSemana = diasSemana[diaIndex];
+            const horarios = rutaData.horarios[diaSemana] || [];
+
+            // Actualizar UI con los resultados
+            document.getElementById('result-ruta-titulo').textContent = rutaData.titulo;
+            document.getElementById('result-ruta-imagen').src = rutaData.imagen;
+            document.getElementById('result-ruta-badge').textContent = rutaData.badge;
+            document.getElementById('resumen-ruta').textContent = `${rutaData.origenNombre} → ${rutaData.destinoNombre}`;
+            document.getElementById('resumen-fecha').textContent = formatearFecha(fecha);
+            document.getElementById('result-fecha').textContent = formatearFecha(fecha);
+
+            // Renderizar horarios
+            renderizarHorarios(horarios, diaIndex);
+
+            // Mostrar resultados
+            document.getElementById('search-results').style.display = 'block';
+            document.getElementById('search-results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderizarHorarios(horarios, diaIndex) {
+            const container = document.getElementById('horarios-disponibles');
+            container.innerHTML = '';
+
+            if (horarios.length === 0) {
+                container.innerHTML = '<p class="no-horarios">No hay horarios disponibles para esta fecha.</p>';
+                return;
+            }
+
+            // Obtener el día de la semana para mostrar
+            const diasNombres = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+            const diaNombre = diasNombres[diaIndex];
+
+            let html = `<div class="schedule-day-group">
+                <div class="schedule-day-label">${diaNombre}</div>
+                <div class="schedule-times-row">`;
+
+            horarios.forEach((h, index) => {
+                html += `
+                    <label class="schedule-option">
+                        <input type="radio" name="horario" value="${h.hora}" ${index === 0 ? 'checked' : ''}>
+                        <span class="schedule-option-content">
+                            <span class="schedule-time">${h.hora}</span>
+                        </span>
+                    </label>
+                `;
+            });
+
+            html += '</div></div>';
+            container.innerHTML = html;
+
+            // Seleccionar primer horario por defecto
+            if (horarios.length > 0) {
+                estado.horario = horarios[0].hora;
+                document.getElementById('resumen-horario').textContent = horarios[0].hora;
+            }
+
+            // Agregar evento change
+            container.querySelectorAll('input[name="horario"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    estado.horario = this.value;
+                    document.getElementById('resumen-horario').textContent = this.value;
+                });
+            });
+        }
+
+        function actualizarCantidad() {
+            document.getElementById('cantidad-asientos').value = estado.cantidadAsientos;
+            document.getElementById('resumen-asientos').textContent = estado.cantidadAsientos;
+            
+            const subtotal = PRECIO_POR_ASIENTO * estado.cantidadAsientos;
+            document.getElementById('resumen-subtotal').textContent = '$' + subtotal.toLocaleString('es-CL');
+        }
+
+        function formatearFecha(fechaStr) {
+            if (!fechaStr) return '-';
+            const partes = fechaStr.split('-');
+            const año = parseInt(partes[0]);
+            const mes = parseInt(partes[1]) - 1;
+            const dia = parseInt(partes[2]);
+            const fecha = new Date(año, mes, dia);
+            return fecha.toLocaleDateString('es-CL', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        function validarFormulario() {
+            let valido = true;
+            let mensaje = '';
+
+            if (!estado.horario) {
+                mensaje = 'Por favor selecciona un horario.';
+                valido = false;
+            }
+
+            if (!valido) {
+                alert(mensaje);
+            }
+
+            return valido;
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kemelbus - Transporte Turístico</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="src/assets/css/flaticon.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="src/assets/css/insur.css" />
+    <link rel="stylesheet" href="src/assets/css/kemelbus.css" />
+  </head>
+  <body>
+    
+    <!-- Header Simplificado -->
+    <header class="main-header clearfix">
+        <div class="main-header__top">
+            <div class="container">
+                <div class="main-header__top-inner">
+                    <div class="main-header__top-address">
+                        <ul class="list-unstyled main-header__top-address-list">
+                            <li>
+                                <i class="icon">
+                                    <span class="icon-pin"></span>
+                                </i>
+                                <div class="text">
+                                    <p>X Región, Chile</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-header__top-right">
+                        <div class="main-header__top-menu-box">
+                            <ul class="list-unstyled main-header__top-menu">
+                                <li>Nuestras redes</li>
+                            </ul>
+                        </div>
+                        <div class="main-header__top-social-box">
+                            <div class="main-header__top-social">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-menu clearfix">
+            <div class="main-menu__wrapper clearfix">
+                <div class="container">
+                    <div class="main-menu__wrapper-inner clearfix">
+                        <div class="main-menu__left">
+                            <div class="main-menu__logo">
+                                <a href="index.html">
+                                    <img src="src/assets/images/kemelbus_logo.jpg" alt="Kemelbus Logo" class="logo-img">
+                                </a>
+                            </div>
+                            <div class="main-menu__main-menu-box">
+                                <div class="main-menu__main-menu-box-inner">
+                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                    <ul class="main-menu__list">
+                                        <li>
+                                            <a href="index.html">Inicio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Empresas</a>
+                                        </li>
+                                        <li>
+                                            <a href="index.html#nuestras-maquinas">Nuestras Máquinas</a>
+                                        </li>
+                                        <li>
+                                            <a href="horarios.html">Carretera Austral Horarios</a>
+                                        </li>
+                                        <li>
+                                            <a href="index.html#nuestras-oficinas">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main-menu__main-menu-box-search-get-quote-btn">
+                                    <div class="main-menu__main-menu-box-search">
+                                        <a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-menu__right">
+                            <div class="main-menu__call">
+                                <div class="main-menu__call-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="main-menu__call-content">
+                                    <a href="tel:+56412345678">+56 41 234 5678</a>
+                                    <p>Contáctanos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner Principal -->
+        <section class="banner-section animate-fade-in">
+            <div class="container">
+                <div class="banner">
+                    <img src="src/assets/images/banner.png" alt="Kemelbus - Transporte Turístico" width="1221" height="310">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="section-title animate-fade-in-up">
+                        <h2>Sobre Nosotros</h2>
+                    </div>
+                    <p class="about-text animate-fade-in-up delay-1">En Kemel Bus somos líderes en el transporte de la Región de Los Lagos, conectando Puerto Montt con la Provincia de Palena a través de la emblemática Ruta Bimodal. Con un profundo conocimiento del territorio austral, nuestra misión es garantizar una conectividad segura y eficiente hacia destinos como Hornopirén y Chaitén, siendo el motor que impulsa el turismo y el desarrollo de nuestras comunidades locales en el corazón de la Carretera Austral.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Rutas -->
+        <section class="routes-section">
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-title animate-fade-in-up">
+                    <h2>Nuestras principales rutas</h2>
+                </div>
+
+                <!-- Ruta 1: Puerto Montt - Hornopirén -->
+                <div class="route-card animate-fade-in-up">
+                    <div class="route-card__image">
+                        <img src="src/assets/images/ptomontt_hornopiren_ruta.jpg" alt="Ruta Puerto Montt - Hornopirén">
+                        <div class="route-card__badge">
+                            <span class="badge-icon"><i class="fas fa-mountain"></i></span>
+                            <span>Parque Nacional</span>
+                        </div>
+                        <div class="route-card__logo">
+                            <img src="src/assets/images/kemelbus_logo_b&w.png" alt="Kemelbus Logo">
+                        </div>
+                    </div>
+                    <div class="route-card__content">
+                        <div class="route-card__header">
+                            <h3 class="route-card__title">Puerto Montt <span class="route-arrow"><i class="fas fa-arrow-right"></i></span> Hornopirén</h3>
+                            <p class="route-card__description">La Ruta 7 conecta Puerto Montt con Hornopirén mediante un tramo costero hasta Caleta La Arena, un transbordo marítimo por el Estuario del Reloncaví hacia Caleta Puelche y un segmento final de bosque nativo. El trayecto destaca por la presencia de los volcanes Yates y Hornopirén, junto con la geografía característica de la Región de Los Lagos.</p>
+                        </div>
+                        
+                        <div class="route-card__schedule">
+                            <h4><i class="fas fa-clock"></i> Horarios de Salida</h4>
+                            <div class="schedule-grid">
+                                <div class="schedule-item">
+                                    <span class="schedule-direction">Puerto Montt a Hornopirén</span>
+                                    <div class="schedule-times">
+                                        <div class="time-row"><span>Lun-Vie</span><span>08:00, 10:00, 12:00, 14:30</span></div>
+                                        <div class="time-row"><span>Sábados</span><span>08:00, 16:30</span></div>
+                                        <div class="time-row"><span>Domingos</span><span>10:00, 16:30</span></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="schedule-direction"> Hornopirén a Puerto Montt</span>
+                                    <div class="schedule-times">
+                                        <div class="time-row"><span>Lun-Vie</span><span>05:30, 07:30, 13:00, 16:00</span></div>
+                                        <div class="time-row"><span>Sábados</span><span>10:30, 13:00</span></div>
+                                        <div class="time-row"><span>Domingos</span><span>13:00, 16:30</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="route-card__actions">
+                            <a href="compra.html" class="btn-comprar btn-large btn-primary-gradient"><i class="fas fa-ticket-alt"></i> Comprar Pasaje</a>
+                            <a href="#" class="btn-info"><i class="fas fa-info-circle"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ruta 2: Puerto Montt - Chaitén -->
+                <div class="route-card animate-fade-in-up delay-2">
+                    <div class="route-card__image">
+                        <img src="src/assets/images/ptomontt_chaiten_ruta.jpg" alt="Ruta Puerto Montt - Chaitén">
+                        <div class="route-card__badge">
+                            <span class="badge-icon"><i class="fas fa-ship"></i></span>
+                            <span>Conexión Ferry</span>
+                        </div>
+                        <div class="route-card__logo">
+                            <img src="src/assets/images/kemelbus_logo_b&w.png" alt="Kemelbus Logo">
+                        </div>
+                    </div>
+                    <div class="route-card__content">
+                        <div class="route-card__header">
+                            <h3 class="route-card__title">Puerto Montt <span class="route-arrow"><i class="fas fa-arrow-right"></i></span> Chaitén</h3>
+                            <p class="route-card__description">La Ruta 7 conecta Puerto Montt con Chaitén integrando el tramo costero y el cruce del estuario hacia Hornopirén, punto donde se inicia un extenso transbordo marítimo bimodal por los fiordos hasta Caleta Gonzalo para concluir vía terrestre a través del Parque Nacional Pumalín. El trayecto destaca por su navegación entre montañas y la geografía del sur de Chile.</p>
+                        </div>
+                        
+                        <div class="route-card__schedule">
+                            <h4><i class="fas fa-clock"></i> Horarios de Salida</h4>
+                            <div class="schedule-grid">
+                                <div class="schedule-item">
+                                    <span class="schedule-direction">Puerto Montt a Chaitén</span>
+                                    <div class="schedule-times">
+                                        <div class="time-row"><span>Lunes a Domingo</span><span>07:00 hrs.</span></div>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="schedule-direction">Chaitén a Puerto Montt</span>
+                                    <div class="schedule-times">
+                                        <div class="time-row"><span>Lunes a Domingo</span><span>10:30 hrs.</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="route-card__actions">
+                            <a href="compra.html" class="btn-comprar btn-large btn-primary-gradient"><i class="fas fa-ticket-alt"></i> Comprar Pasaje</a>
+                            <a href="#" class="btn-info"><i class="fas fa-info-circle"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section class="news-carousel-page" id="nuestras-maquinas">
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-title animate-fade-in-up">
+                    <h2>Nuestras máquinas</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="news-one__single animate-scale-in delay-1">
+                            <div class="news-one__img">
+                                <img src="src/assets/images/Mascarello Roma R4.jpg" alt="Máquina 1">
+                            </div>
+                            <div class="news-one__content">
+                                <ul class="list-unstyled news-one__meta">
+                                    <li><a href="#"><i class="far fa-calendar"></i> 2025</a></li>
+                                </ul>
+                                <h3 class="news-one__title"><a href="#">Mercedes Benz OF-1724 BlueTec5</a></h3>
+                                <p class="news-one__text">Autobús de motor frontal equilibrado y eficiente, ideal para rutas interurbanas cortas por su robustez mecánica y tecnología de bajas emisiones.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="news-one__single animate-scale-in delay-2">
+                            <div class="news-one__img">
+                                <img src="src/assets/images/Mascarello Roma 350.jpg" alt="Máquina 2">
+                            </div>
+                            <div class="news-one__content">
+                                <ul class="list-unstyled news-one__meta">
+                                    <li><a href="#"><i class="far fa-calendar"></i> 2025</a></li>
+                                </ul>
+                                <h3 class="news-one__title"><a href="#">Mercedes-Benz O500R</a></h3>
+                                <p class="news-one__text">Autobús de motor trasero diseñado para viajes de media y larga distancia que destaca por su mayor confort de marcha, potencia superior y una suspensión neumática que ofrece una experiencia de viaje mucho más suave y silenciosa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="news-one__single animate-scale-in delay-3">
+                            <div class="news-one__img">
+                                <img src="src/assets/images/Neobus New Road.jpg" alt="Máquina 3">
+                            </div>
+                            <div class="news-one__content">
+                                <ul class="list-unstyled news-one__meta">
+                                    <li><a href="#"><i class="far fa-calendar"></i> 2025</a></li>
+                                </ul>
+                                <h3 class="news-one__title"><a href="#">Mercedes-Benz OF-1724</a></h3>
+                                <p class="news-one__text">Autobús de motor frontal que destaca por su diseño exterior moderno y aerodinámico, ofreciendo una estructura robusta y confiable diseñada para maximizar la rentabilidad en rutas interurbanas de corta distancia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nuestras Oficinas -->
+        <section class="offices-section" id="nuestras-oficinas">
+            <div class="container">
+                <div class="section-title animate-fade-in-up">
+                    <h2>Nuestras oficinas</h2>
+                </div>
+                
+                <div class="row offices-row">
+                    <!-- Oficina Puerto Montt -->
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="office-card animate-slide-left">
+                            <div class="office-map">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-72.95040092635365!3d-41.47759361649366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s-41.47759361649366%2C-72.95040092635365!5e0!3m2!1ses!2scl!4v1600000000000!5m2!1ses!2scl" 
+                                    class="office-map-iframe" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="office-info">
+                                <div class="office-info-item">
+                                    <img src="src/assets/images/flaticon_oficina.png" alt="Oficina" class="office-icon">
+                                    <div class="office-info-text">
+                                        <h4>Oficina Terminal de Buses Puerto Montt</h4>
+                                        <p>N40</p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <img src="src/assets/images/flaticon_telefono.png" alt="Teléfono" class="office-icon">
+                                    <div class="office-info-text">
+                                        <h4>Teléfono</h4>
+                                        <p>652253530</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oficina Hornopirén -->
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="office-card animate-slide-right">
+                            <div class="office-map">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-72.47261299417286!3d-41.96596767288568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s-41.96596767288568%2C-72.47261299417286!5e0!3m2!1ses!2scl!4v1600000000000!5m2!1ses!2scl" 
+                                    class="office-map-iframe" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="office-info">
+                                <div class="office-info-item">
+                                    <img src="src/assets/images/flaticon_oficina.png" alt="Oficina" class="office-icon">
+                                    <div class="office-info-text">
+                                        <h4>Oficina Terminal de Buses Hornopirén</h4>
+                                        <p>N03</p>
+                                    </div>
+                                </div>
+                                <div class="office-info-item">
+                                    <img src="src/assets/images/flaticon_telefono.png" alt="Teléfono" class="office-icon">
+                                    <div class="office-info-text">
+                                        <h4>Teléfono</h4>
+                                        <p>976487146</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer animate-fade-in">
+        <div class="container">
+            <p>Desarrollado por BGS - Projects 2026</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox para imágenes de rutas -->
+    <div class="lightbox" id="route-lightbox">
+        <button class="lightbox__close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+        <div class="lightbox__content">
+            <div class="lightbox__image-container">
+                <img src="" alt="Imagen de ruta" id="lightbox-img">
+            </div>
+        </div>
+        <button class="lightbox__zoom" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
